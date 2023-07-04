@@ -1,0 +1,14 @@
+/*RESET*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:not(ul) {
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
