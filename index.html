@@ -32,13 +32,43 @@
 
         <!--TITLE-->
 
-        <title>Document</title>
+        <title>ToDo - List</title>
 
     </head>
     
     <div id="app">
 
-        {{ message }}
+        <form action="" @submit.prevent="addTask()">
+            <input
+            required
+             type="text"
+             v-model = "newTask"
+             placeholder="Add a new task">
+
+             <button>
+                Add Task
+             </button>
+
+        </form>
+
+        <ul>
+            <template  v-if="tasks.length > 0">
+                <li v-for="singleTask,index in tasks"
+                :class="{ done: singleTask.done }" @click="markAsDone(singleTask)">
+                    {{singleTask.name}}
+
+                    <span @click="removeTask(index)">
+                        X
+                    </span>
+                </li>
+            </template>
+
+            <template  v-else>
+                <div>
+                    No new tasks for today
+                </div>
+            </template>
+        </ul>
     
     </div>
 

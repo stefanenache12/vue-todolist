@@ -12,3 +12,11 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+.done {
+    text-decoration: line-through;
+}
+
+li {
+    cursor: pointer;
+}
