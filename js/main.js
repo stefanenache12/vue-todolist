@@ -4,20 +4,7 @@ createApp({
     data() {
       return {
         newTask: '',
-        tasks: [
-          {
-            name: 'Go to the grocery',
-            done: false,
-          },
-          {
-            name: 'Pay the bill',
-            done: true,
-          },
-          {
-            name: 'Wash the car',
-            done: false,
-          }
-        ]
+        tasks: []
       }
     },
     methods: {
